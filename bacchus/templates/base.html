@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+{% block head %}
+        <title>Quem é o cantor?</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href={{url_for('static', filename='css/uikit.min.css')}} />
+        <script src={{url_for('static', filename='js/uikit.min.js')}}></script>
+        <script src={{url_for('static', filename='js/uikit-icons.min.js')}}></script>
+{% endblock head %}
+
+{% block extras_css %}
+{% endblock extras_css %}
+
+    </head>
+    <body>
+{% block navbar %}
+      <nav class="uk-navbar-container" uk-navbar>
+          <div class="uk-navbar-left">
+              <a class="uk-navbar-item uk-logo" href="{{url_for('site.home')}}">
+                <img data-src={{url_for('static', filename='image/logo.png')}} width="40px" height="60px" alt="logo" uk-img>
+              </a>
+              <ul class="uk-navbar-nav">
+                  <li class="uk-active"><a href="{{url_for('site.home')}}">Home</a></li>
+                  <li><a href="{{url_for('site.band_search')}}">Banda</a></li>
+              </ul>
+
+          </div>
+          <div class="uk-navbar-right">
+
+              <ul class="uk-navbar-nav">
+                  <li>
+                      <a href="#"class="uk-icon-link" uk-icon="chevron-down"></a>
+                      <div class="uk-navbar-dropdown">
+                          <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="/admin">log in</a></li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+{% endblock navbar %}
+
+<div class="uk-container">
+{% block breadcrumb %}
+{% endblock breadcrumb %}
+</div>
+
+<div class="uk-container">
+{% block top %}
+{% endblock top %}
+</div>
+
+<div class="uk-section">
+{% block main %}
+{% endblock main %}
+</div>
+{% block footer %}
+  <footer class="uk-footer uk-position-bottom">
+  <div class="uk-position-bottom-center">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+{% endblock footer %}
+    
+  </body>
+</html>

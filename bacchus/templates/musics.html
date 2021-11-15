@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block breadcrumb %}
+<ul class="uk-breadcrumb">
+    <li><a href="{{url_for('site.home')}}">Home</a></li>
+    <li><a href="{{url_for('site.band_search')}}">Banda</a></li>
+</ul>
+{% endblock breadcrumb %}
+
+
+{% block main %}
+{% if banda %}
+    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-position-center">
+      <h3 class="uk-card-title" name="banda-name">{{banda}}</h3>
+      <p uk-margin>
+        <a href="{{url_for('site.band_search')}}">
+          <button class="uk-button uk-button-danger action">Voltar</button>
+        </a>
+      </p>
+    </div>
+
+{% endif %}
+{% endblock main %}

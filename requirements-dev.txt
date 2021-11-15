@@ -1,0 +1,10 @@
+r-dev
+black
+flake8
+flask-debugtoolbar
+flask-shell-ipython
+ipdb
+ipython
+isort
+pytest
+pytest-flask

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
+     data-src="{{url_for('static', filename='image/guitar-640.jpg')}}"
+     data-srcset="{{url_for('static', filename='image/guitar-640.jpg')}},
+                  {{url_for('static', filename='image/guitar-1280.jpg')}}"
+     data-sizes="(min-width: 650px) 650px, 100vw" uk-img>
+    <div class="uk-container uk-position-center">
+      <h1>Projeto Bacchus</h1>
+      <h2>Buscador de banda quase inteligente</h2>
+    </div>
+</div>
+{% endblock main %}

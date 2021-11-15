@@ -1,0 +1,13 @@
+[default]
+DEBUG = false
+FLASK_ADMIN_SWATCH = "cosmo"
+PERMANENT_SESSION_LIFETIME = 3600
+SQLALCHEMY_TRACK_MODIFICATIONS = "False"
+
+[development]
+DEBUG = true
+SQLALCHEMY_DATABASE_URI = "sqlite:///bacchus.db"
+ADMIN_NAME = "Bacchus (Dev)"
+
+[production]
+SQLALCHEMY_DATABASE_URI = "mysql:///bacchus.db"

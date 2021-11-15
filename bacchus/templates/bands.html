@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block breadcrumb %}
+<ul class="uk-breadcrumb">
+    <li><a href="{{url_for('site.home')}}">Home</a></li>
+    <li><a href="{{url_for('site.band_search')}}">Banda</a></li>
+</ul>
+{% endblock breadcrumb %}
+
+{% block top %}
+<form class="uk-form-stacked" action="banda" method="post">
+    <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">
+          Trechos de musicas
+        </label>
+        <div class="uk-form-controls">
+            <input class="uk-input"
+              name="trecho"
+              id="form-stacked-text"
+              type="text"
+              placeholder="People are strange, when you're a stranger">
+        </div>
+        <p uk-margin>
+          <button
+            class="uk-button uk-button-primary"
+            type="submit">
+              Enviar
+          </button>
+        </p>
+    </div>
+</form>
+
+{% endblock top %}
