@@ -1,5 +1,5 @@
-from .main import bp
+from bacchus.ext.site.main import site_bp
 
 
 def init_app(app):
-    app.register_blueprint(bp)
+    app.register_blueprint(site_bp)

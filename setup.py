@@ -7,7 +7,7 @@ def read(filename):
 
 setup(
     name="bacchus",
-    version="0.1.0",
+    version="1.0.0",
     description='Bacchus Project - What is the band',
     packages=find_packages(),
     include_package_data=True,
