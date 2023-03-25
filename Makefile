@@ -18,8 +18,10 @@ tests:
 
 run:
     venv/bin/activate; \
-	export FLASK_ENV=development && \
+	export FLASK_DEBUG=True && \
 	export FLASK_APP=bacchus/app.py && \
+	flask create-db
+	flask add-user -e admin@mail.com -p 123 -a
 	flask run
 
 all: clean install run
